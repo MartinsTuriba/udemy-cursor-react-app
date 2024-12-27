@@ -12,12 +12,12 @@ export default function DashboardPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [newKeyName, setNewKeyName] = useState('');
+  const [newKeyMaxUsage, setNewKeyMaxUsage] = useState('');
   const [isCreating, setIsCreating] = useState(false);
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [editingKey, setEditingKey] = useState(null);
   const [editName, setEditName] = useState('');
   const [visibleKeys, setVisibleKeys] = useState(new Set());
-  const [newKeyMaxUsage, setNewKeyMaxUsage] = useState('');
   const [sortOrder, setSortOrder] = useState('asc');
 
   // Fetch API keys
@@ -273,7 +273,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="min-h-screen p-8 bg-[#fafafa]">
+    <div className="p-8">
       <Toaster 
         position="bottom-right"
         toastOptions={{
